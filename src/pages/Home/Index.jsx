@@ -1,5 +1,7 @@
 import React from 'react'
 import Chart from '../../component/Chart/Candlestick';
+import Header from '../../component/Header/Header';
+import Topbar from '../../component/Topbar/Topbar';
 
 export const Home = () => {
   return (
@@ -7,29 +9,7 @@ export const Home = () => {
       <div className="container-fluid maindashboard overflow-hidden">
         <div className="h-100 overflow-y-auto overflow-x-hidden">
           <div className="row h-100 flex-column flex-nowrap g-2">
-            <div className="col-12 px-0">
-              <nav className="navbar header navbar-expand-lg px-3">
-                <a className="navbar-brand d-flex" href="index.html"><img src="assets/img/logo.svg" className="object-contain h-100" alt="logo" /></a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul className="navbar-nav gap-3 align-items-center me-auto mb-2 mb-lg-0">
-                    <li className="nav-item"><a className="nav-link active" aria-current="page" href="javascript:;">Spot</a></li>
-                    <li className="nav-item"><a className="nav-link" href="javascript:;">Portfolio</a></li>
-                    <li className="nav-item"><a className="nav-link" href="javascript:;">Orders</a></li>
-                    <li className="nav-item"><a className="nav-link" href="javascript:;">Wallet &amp; Fees</a></li>
-                    <li className="nav-item"><a className="nav-link deposit text-uppercase fw-medium disabled" aria-disabled="true">Crypto Deposit</a></li>
-                  </ul>
-                  <ul className="navbar-nav gap-3 align-items-center">
-                    <li className="nav-item"><a className="nav-link" href="javascript:;">Contests</a></li>
-                    <li className="nav-item"><a className="nav-link" href="javascript:;">Help Center</a></li>
-                    <li className="nav-item"><a className="nav-link" href="javascript:;"><span><img src="assets/img/icon/contact.svg" alt="contact" className="object-contain w-100" /></span></a></li>
-                    <li className="nav-item"><a className="text-uppercase fw-medium btn btn-theme2 themebtn" href="javascript:;" data-bs-toggle="modal" data-bs-target="#login">Login / Sign up</a></li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
+          <Header/>
             <div className="col-12 h-100 flex-lg-fill overflow-lg-hidden">
               <div className="row h-100 gx-2">
                 {/* left Side Start */}
@@ -37,32 +17,7 @@ export const Home = () => {
                   <div className="row h-100 flex-column flex-nowrap row-gap-2 mx-0 gx-2">
                     <div className="col-12 d-flex flex-column row-gap-2">
                       {/* trending cripto bar   */}
-                      <div className="trendingcripto bg-theme1 d-flex align-items-center gap-3" id="trendingcripto">
-                        <button className="criptoFilter shadow-none border-0 rounded-1 text-white" id="criptoFilter"><span className="contant text-nowrap">top losers</span><img src="assets/img/icon/Switchsvg.svg" alt="Switchsvg" /></button>
-                        <ul className="trendingcripto-list gap-3 m-0 p-0 align-items-center px-2 topcripto">
-                          <li className="list-item d-flex align-items-center gap-2">POWR/INR <span className="prich">₹33.524</span> <span className="prich text-theme3">+21.90%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">UMA/INR <span className="prich">₹83.24</span> <span className="prich text-theme3">+51.90%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">IMX/INR <span className="prich">₹58.54</span> <span className="prich text-theme3">+52.70%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">BCH/INR <span className="prich">₹43.67</span> <span className="prich text-theme3">+41.60%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">POLYX/INR <span className="prich">₹55.504</span> <span className="prich text-theme3">+84.32%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">POWR/INR <span className="prich">₹33.524</span> <span className="prich text-theme3">+21.90%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">UMA/INR <span className="prich">₹83.24</span> <span className="prich text-theme3">+51.90%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">IMX/INR <span className="prich">₹58.54</span> <span className="prich text-theme3">+52.70%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">BCH/INR <span className="prich">₹43.67</span> <span className="prich text-theme3">+41.60%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">POLYX/INR <span className="prich">₹55.504</span> <span className="prich text-theme3">+84.32%</span></li>
-                        </ul>
-                        <ul className="trendingcripto-list gap-3 m-0 p-0 align-items-center px-2 losercripto">
-                          <li className="list-item d-flex align-items-center gap-2">REQ/INR <span className="prich">₹9.943</span> <span className="prich text-theme4">-10.90%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">BONK/INR <span className="prich">₹53.524</span> <span className="prich text-theme4">-5.50%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">ICP/INR <span className="prich">₹83.524</span> <span className="prich text-theme4">-21.57%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">JTO/INR <span className="prich">₹35.14</span> <span className="prich text-theme4">-50.18%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">POWR/INR <span className="prich">₹18.524</span> <span className="prich text-theme4">-14.88%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">BONK/INR <span className="prich">₹10.182</span> <span className="prich text-theme4">-25.70%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">ICP/INR <span className="prich">₹43.524</span> <span className="prich text-theme4">-43.40%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">JTO/INR <span className="prich">₹38.50</span> <span className="prich text-theme4">-21.90%</span></li>
-                          <li className="list-item d-flex align-items-center gap-2">BONK/INR <span className="prich">₹33.524</span> <span className="prich text-theme4">-12.55%</span></li>
-                        </ul>
-                      </div>
+                      <Topbar/>
                       <div className="row criptotiming-high g-2">
                         <div className="col-md-2">
                           <div className="carditem bg-theme1 rounded-1 d-flex justify-content-between gap-3 clickable" id="chart-crypto-switch">
