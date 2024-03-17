@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../../assets/img/logo.svg'
+import Contact from '../../assets/img/icon/contact.svg'
 
 const Header = () => {
     return (
@@ -21,7 +22,7 @@ const Header = () => {
                     <ul className="navbar-nav gap-3 align-items-center">
                         <li className="nav-item"><a className="nav-link" href="javascript:;">Contests</a></li>
                         <li className="nav-item"><a className="nav-link" href="javascript:;">Help Center</a></li>
-                        <li className="nav-item"><a className="nav-link" href="javascript:;"><span><img src="assets/img/icon/contact.svg" alt="contact" className="object-contain w-100" /></span></a></li>
+                        <li className="nav-item"><a className="nav-link" href="javascript:;"><span><img src={Contact} alt="contact" className="object-contain w-100" /></span></a></li>
                         <li className="nav-item"><a className="text-uppercase fw-medium btn btn-theme2 themebtn" href="javascript:;">Login / Sign up</a></li>
                     </ul>
                 </div>

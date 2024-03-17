@@ -1,14 +1,6 @@
 // Override default variables before the import
 $body-bg: #000;
 
-.losercripto{
-    & .list-item{
-        & .cryptolavel {
-            color: #f14366 !important;
-        }
-    }
-}
-
 
 @import './../public/assets/scss/style.scss';
 
