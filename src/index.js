@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import Chart from "react-apexcharts";
 import './index.css';
@@ -6,11 +6,25 @@ import './index.css';
 import './custom.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import Home from './pages/Home/Index';
+import Main from './pages/Main/index'
+import Portfolio from './pages/Portfolio/Portfolio';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Home/>}>
+      <Route path='/main' element={<Main/>}/>
+      <Route path='/portfolio' element={<Portfolio Component={<Portfolio/>}/>}/>
+    </Route>
+  )
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
