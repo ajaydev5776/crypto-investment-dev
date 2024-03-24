@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Chart from "react-apexcharts";
 import './index.css';
 // import 'bootstrap/dist/css/bootstrap.css';
@@ -10,12 +11,16 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Home from './pages/Home/Index';
 import Main from './pages/Main/index'
 import Portfolio from './pages/Portfolio/Portfolio';
+import Layout from './Layout/Layout'
+import Refer from './pages/Refer/Refer';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Home/>}>
+    <Route path='/' element={<Layout/>}>
+      <Route path='' element={<Home/>}/>
       <Route path='/main' element={<Main/>}/>
-      <Route path='/portfolio' element={<Portfolio Component={<Portfolio/>}/>}/>
+      <Route path='/portfolio' element={<Portfolio/>}/>
+      <Route path='/refer' element={<Refer/>}/>
     </Route>
   )
 )

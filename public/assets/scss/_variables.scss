@@ -35,6 +35,8 @@ $theming1:#121319 !default;
 $theming2:#cda954 !default;
 $theming3:#10bd55 !default;
 $theming4:#f14366 !default;
+$theming5:#a0aec0 !default;
+$theming6:#718096 !default;
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -53,6 +55,8 @@ $colors: (
   "theme2":     $theming2,
   "theme3":     $theming3,
   "theme4":     $theming4,
+  "theme5":     $theming5,
+  "theme6":     $theming6,
   "blue":       $blue,
   "indigo":     $indigo,
   "purple":     $purple,
@@ -74,6 +78,8 @@ $theme1:        $theming1 !default;
 $theme2:        $theming2 !default;
 $theme3:        $theming3 !default;
 $theme4:        $theming4 !default;
+$theme5:        $theming5 !default;
+$theme6:        $theming6 !default;
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -90,6 +96,8 @@ $theme-colors: (
   "theme2":     $theming2,
   "theme3":     $theming3,
   "theme4":     $theming4,
+  "theme5":     $theming5,
+  "theme6":     $theming6,
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,

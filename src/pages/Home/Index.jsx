@@ -14,7 +14,7 @@ export const Home = () => {
       <div className="container-fluid maindashboard overflow-hidden">
         <div className="h-100 overflow-y-auto overflow-x-hidden">
           <div className="row h-100 flex-column flex-nowrap g-2">
-          <Header/>
+          {/* <Header/> */}
             <div className="col-12 h-100 flex-lg-fill overflow-lg-hidden">
               <div className="row h-100 gx-2">
                 {/* left Side Start */}

@@ -203,14 +203,6 @@ img {
 }
 
 .portfolioSection{
-    padding-inline: 0;
-    @include xl{
-        padding-inline: 120px;
-    }
-    @include xxl{
-        padding-inline: 230px;
-
-    }
     & .header{
         background-color: #1d202c;
         padding: 0px 10px;
@@ -228,6 +220,9 @@ img {
         & .leftside {
             & .criptoname {
                 font-size: 10px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
                 color: #a0aec0 !important;
                 @include lg{
                     font-size: 12px;
@@ -271,9 +266,7 @@ img {
             }
         }
     }
-    & .suceesstxt{
-        color: #51d5ad;
-    }
+    
     & .portfoliotable{
         margin-top: 15px;
         & table{
@@ -379,8 +372,379 @@ img {
         border-radius: 100%;
         overflow: hidden;
     }
+
+
 }
 
+.referSection{
+    & .referSectionOne{
+        & .earntxt{
+            font-size: 55px;
+            background: linear-gradient(to right, #cda954, 
+                    #ff6b08, #f14366); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            line-height: 120%;
+            @include xl{
+                font-size: 60px;
+            }
+            @include xxl{
+                font-size: 72px;
+            }
+        }
+        & .subtxt{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 120%;
+            @include xl{
+                font-size: 30px;
+            }
+            @include xxl{
+                font-size: 36px;
+            }
+        }
+        & .moretxt{
+            font-size: 16px;
+            font-weight: normal;
+            color: $theme5;
+            @include xl{
+                font-size: 18px;
+            }
+            @include xxl{
+                font-size: 20px;
+            }
+        }
+        & .gradinetBorder{
+            background: linear-gradient(#f14366, #cda954);
+            padding: 2px;
+            border-radius: 8px;
+            & .referLink{
+                border-radius: 8px;
+                padding: 16px 20px;
+                background-color: $theme1;
+                & .textMain{
+                    font-size: 20px;
+                    line-height: 120%;
+                    color: $theme5;
+                }
+                & .referLinktxt{
+                    padding-block: 10px;
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height: 120%;
+                }
+                & .referImg{
+                    height: 30px;
+                    width: 30px;
+                }
+                & .lineAnimation{
+                    border-top: 1px solid $theme5;
+                    opacity: 0.5;
+                    & .animationDots{
+                        height: 10px;
+                        width: 10px;
+                        border-radius: 50%;
+                        color: $white;
+                        animation: dots 1.4s 0s infinite;
+                        transition-delay: 75ms;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes dots {
+    0%   {animation-timing-function: cubic-bezier(.8,0,1,1);
+        transform: scale(0);}
+    50%  {nimation-timing-function: cubic-bezier(0,0,.2,1);
+        transform: scale(1);}
+    100% {animation-timing-function: cubic-bezier(.8,0,1,1);
+        transform: scale(0);}
+}
+
+// table section start
+.tableSection{
+    & .mainCard{
+        & .cardImg{
+            height: 40px;
+        }
+        & .cardtxt{
+            font-size: 16px;
+            line-height: 120%;
+            font-weight: normal;
+            color: $white;
+            text-align: center;
+            padding: 15px 0 20px 0;
+            @include md{
+                padding: 20px 0 25px 0;
+            }
+            @include lg{
+                padding: 30px 0 20px 0;
+            }
+            @include xl{
+                padding: 35px 0 20px 0;
+            }
+        }
+        & .number{
+            text-align: center;
+            font-size: 16px;
+            height: 30px;
+            width: 30px;
+            color: $black;
+            background-color: $theme2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-inline: auto;
+        }
+    }
+}
+// table section ends
+
+// voucher section start
+    .voucherSection{
+        & .fluidVoucher{
+            // padding: 10px 15px;
+            background: $theme1;
+            border-radius: 8px;
+            @include md{
+                padding: 10px 32px;
+            }
+        }
+        & .marginDiv{
+            @include xxl{
+                margin-block: 40px;
+            }
+            & .text{
+                font-size: 22px;
+                @include sm{
+                    font-size: 28px;
+                }
+                @include lg{
+                    font-size: 30px;
+                }
+            }
+            & .subtext{
+                font-size: 16px;
+                line-height: 120%;
+                color: $theme6;
+                @include lg{
+                    font-size: 18px;
+                }
+            }
+        }
+        & .voucherForm{
+            &.formLabel{
+                color: $theme6 !important;
+            }
+            & .formControl{
+                background: $theme1 !important;
+                &::placeholder{
+                    color: $theme6 !important;
+                }
+            }
+        }
+    }
+// voucher section ends
+
+// keyhight section start
+    .keyHighLightsSection{
+        & .heading{
+            font-size: 32px;
+            font-weight: 700;
+            @include sm{
+                font-size: 36px;
+            }
+        }
+        & .mainCard{
+            padding-inline: 20px;
+            & .cardImg{
+                height: 100px;
+                max-width: 130px;
+                margin-inline: auto;
+            }
+            & .cardtxt{
+                font-size: 20px;
+                font-weight: normal;
+                text-align: center;
+                color: $theme6;
+            }
+        }
+    }
+// keyhight section ends
 
 
-
+// wallet Section start
+    .walletSection{
+        & .navTabs{
+            background-color: $theme1 !important;
+            border-bottom: 1px solid $theme6;
+            & .navLink{
+                padding-block: 12px !important;
+                color: $white !important;
+                border: none;
+                border-radius: 0%;
+                padding-inline: 45px;
+                @include sm{
+                    padding-inline: 60px;
+                }
+                &.active{
+                    background-color: #1d202c !important;
+                    color: $theme2 !important;
+                    border-bottom: 3px solid $theme2;
+                    border-radius: 5px 5px 0  0;
+                }
+            }
+        }
+        & .tabContent{
+            .carditem {
+                padding: 0rem 0.5rem;
+                @include lg{
+                    padding: 0.5rem 0.75rem;
+                }
+                & .leftside {
+                    & .criptoname {
+                        font-size: 10px;
+                        color: $theme6 !important;
+                        font-weight: 500 !important;
+                        @include lg{
+                            font-size: 12px;
+                        }
+                        @include xl{
+                            font-size: 16px;
+                        }
+                        & img {
+                            width: 16px;
+                        }
+                    }
+                    & .prich {
+                        font-size: 12px;
+                        @include lg{
+                            font-size: 12px;
+                        }
+                        @include xl{
+                            font-size: 16px;
+                        }
+                        & span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                & .rightside {
+                    & img {
+                        width: 16px;
+                        object-fit: contain;
+                    }
+                }
+                &.active{
+                    & .rightside {
+                        & img {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                &.miditems {
+                    & .leftside {
+                        border-right: 1px solid lighten($theme1, 20);
+                    }
+                }
+            }
+            & .pnlDiv{
+                background-color: rgb(45 55 72);
+                padding: 13px 20px;
+                & .pnltxt{
+                    font-size: 13px;
+                    line-height: 100%;
+                }
+                & .mainCArd{
+                    padding-left: 10px;
+                    @include sm{
+                        padding-left: 20px;
+                        border-left: 2px solid $theme6;
+                    }
+                    & .pnlimg{
+                        height: 13px;
+                        width: 13px;
+                        display: flex;
+                    }
+                    & .txt{
+                        color: $theme2;
+                        line-height: 100%;
+                        font-size: 13px;
+                    }
+                    & .arrowimg{
+                        height: 10px;
+                        width: 10px;
+                        display: flex;
+                    }
+                }
+            }
+            & .walletTable{
+                margin-top: 20px;
+                background-color: $theme1;
+                & thead{
+                    background-color: #1d202c !important;
+                    border-color: $theme6 !important;
+                    & tr{
+                        color: $theme6;
+                        font-weight: normal !important;
+                        & th{
+                            font-size: 11px;
+                            @include sm{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                & tbody{
+                    & tr{
+                        color: $white;
+                        border-color: $theme6 !important;
+                    }
+                }
+                & .mainCard{
+                    padding: 40px 20px;
+                    & .heading{
+                        font-size: 20px;
+                        font-weight: 700;
+                        padding: 20px 0 5px 0;
+                    }
+                    & .subHEad{
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $theme6;
+                    }
+                }
+                & .coinName{
+                    font-size: 13px;
+                    font-weight: 700;
+                    white-space: nowrap;
+                    @include sm{
+                        font-size: 15px;
+                    }
+                    & .bracket{
+                        font-size: 12px;
+                        @include sm{
+                            font-size: 10px;
+                        }
+                    }
+                }
+                & .coinImg{
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    @include sm{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+// wallet Section ends
+.suceesstxt{
+    color: $theme3;
+}
