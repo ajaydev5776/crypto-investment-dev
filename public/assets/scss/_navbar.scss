@@ -29,6 +29,16 @@
             }
         }
     }
+    & .offcanvas {
+        width: 320px !important;
+        border: none;
+        & .offcanvas-header {
+            border-bottom: 1px solid rgba($theme2, 0.3);
+            & .offcanvas-title {
+                height: 35px;
+            }
+        }
+    }
 }
 
 .navbar-toggler-icon {

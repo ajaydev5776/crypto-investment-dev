@@ -42,23 +42,32 @@ const Header = () => {
         <div className="col-12 px-0 sticky-top mb-2">
             <nav className="navbar header navbar-expand-lg px-3">
                 <Link to="/" className="navbar-brand d-flex"><img src={Logo} className="object-contain h-100" alt="logo"/></Link>
-                <button className="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                {/* <button className="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button> */}
+                <button className="navbar-toggler shadow-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav gap-3 align-items-center me-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><NavLink to="" className="nav-link">Spot</NavLink></li>
-                        <li className="nav-item"><NavLink to="/portfolio" className="nav-link">Portfolio</NavLink></li>
-                        <li className="nav-item"><NavLink to="/order" className="nav-link">Orders</NavLink></li>
-                        <li className="nav-item"><NavLink to="/wallet" className="nav-link">Wallet & Fees</NavLink></li>
-                        <li className="nav-item"><NavLink to="#" className="nav-link deposit text-uppercase fw-medium disabled text-white">Crypto Deposit</NavLink></li>
-                    </ul>
-                    <ul className="navbar-nav gap-3 align-items-center">
-                        <li className="nav-item"><NavLink to="/refer" className="nav-link">Refer & Earn</NavLink></li>
-                        <li className="nav-item"><NavLink to="#" className="nav-link">Help Center</NavLink></li>
-                        <li className="nav-item"><NavLink to="#" className="nav-link"><span><img src={Contact} alt="contact" className="object-contain w-100" /></span></NavLink></li>
-                        <li className="nav-item"><NavLink to="#" onClick={handleLoginModalOpen} className="text-uppercase fw-medium btn btn-theme2 themebtn text-white">Login / Sign up</NavLink></li>
-                    </ul>
+                <div className="offcanvas offcanvas-end text-bg-dark bg-theme1" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                    <div className="offcanvas-header">
+                        <h5 className="offcanvas-title" id="offcanvasNavbar2Label"><img src={Logo} className="object-contain h-100" alt="logo"/></h5>
+                        <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div className="offcanvas-body">
+                        <ul className="navbar-nav gap-3 align-items-lg-center me-auto mb-3 mb-lg-0">
+                            <li className="nav-item"><NavLink to="" className="nav-link">Spot</NavLink></li>
+                            <li className="nav-item"><NavLink to="/portfolio" className="nav-link">Portfolio</NavLink></li>
+                            <li className="nav-item"><NavLink to="/order" className="nav-link">Orders</NavLink></li>
+                            <li className="nav-item"><NavLink to="/wallet" className="nav-link">Wallet & Fees</NavLink></li>
+                            <li className="nav-item"><NavLink to="#" className="nav-link deposit text-uppercase fw-medium disabled text-white d-inline-flex">Crypto Deposit</NavLink></li>
+                        </ul>
+                        <ul className="navbar-nav gap-3 align-items-lg-center">
+                            <li className="nav-item"><NavLink to="/refer" className="nav-link">Refer & Earn</NavLink></li>
+                            {/* <li className="nav-item"><NavLink to="#" className="nav-link">Help Center</NavLink></li> */}
+                            <li className="nav-item"><NavLink to="#" className="nav-link d-flex align-items-center gap-3">Help Center<span><img src={Contact} alt="contact" className="object-contain w-100" /></span></NavLink></li>
+                            <li className="nav-item"><NavLink to="#" onClick={handleLoginModalOpen} className="text-uppercase fw-medium btn btn-theme2 themebtn text-white">Login / Sign up</NavLink></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>

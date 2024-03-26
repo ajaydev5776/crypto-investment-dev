@@ -115,13 +115,6 @@
     }
     & .topheader {
         background-color: $theme1;
-        & .searchbar {
-            background-color: transparent;
-            font-size: 14px;
-            &::placeholder{
-                color: $white;
-            }
-        }
         & .navs {
             & .star-fill {
                 display: flex;
@@ -135,6 +128,15 @@
                 }
             }
         }
+    }
+}
+
+.searchbar {
+    background-color: transparent !important;
+    font-size: 14px;
+    color: $white !important;
+    &::placeholder{
+        color: $theme6 !important;
     }
 }
 
@@ -473,18 +475,9 @@ img {
             font-size: 16px;
             line-height: 120%;
             font-weight: normal;
-            color: $white;
+            color: $theme5;
             text-align: center;
             padding: 15px 0 20px 0;
-            @include md{
-                padding: 20px 0 25px 0;
-            }
-            @include lg{
-                padding: 30px 0 20px 0;
-            }
-            @include xl{
-                padding: 35px 0 20px 0;
-            }
         }
         & .number{
             text-align: center;
@@ -508,15 +501,15 @@ img {
         & .fluidVoucher{
             // padding: 10px 15px;
             background: $theme1;
-            border-radius: 8px;
-            @include md{
-                padding: 10px 32px;
-            }
+            // border-radius: 8px;
+            // @include md{
+            //     padding: 10px 32px;
+            // }
         }
         & .marginDiv{
-            @include xxl{
-                margin-block: 40px;
-            }
+            // @include xxl{
+            //     margin-block: 40px;
+            // }
             & .text{
                 font-size: 22px;
                 @include sm{
@@ -524,6 +517,18 @@ img {
                 }
                 @include lg{
                     font-size: 30px;
+                }
+            }
+            & .footertext {
+                font-size: 14px;
+                @include sm{
+                    font-size: 16px;
+                }
+                @include md{
+                    font-size: 18px;
+                }
+                @include xl{
+                    font-size: 20px;
                 }
             }
             & .subtext{
@@ -559,17 +564,35 @@ img {
             }
         }
         & .mainCard{
-            padding-inline: 20px;
+            padding: 20px;
+            background: $theme1;
+            height: 100%;
+            border-radius: 8px;
+            transition: all ease-in-out 0.3s;
+            border: 1px solid transparent;
+            &:hover{
+                transform: translateY(-10px);
+                border-color: rgba($theme2, 0.5);
+                & .cardtxt {
+                    color: $white;
+                }
+            }
+            @include xl{
+            }
             & .cardImg{
-                height: 100px;
-                max-width: 130px;
+                // height: 70px;
+                max-width: 100px;
                 margin-inline: auto;
+                & img {
+                    aspect-ratio: 30/15;
+                }
             }
             & .cardtxt{
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: normal;
                 text-align: center;
-                color: $theme6;
+                color: $theming5;
+                transition: all ease-in-out 0.3s;
             }
         }
     }
@@ -582,19 +605,21 @@ img {
             background-color: $theme1 !important;
             border-bottom: 1px solid $theme6;
             & .navLink{
-                padding-block: 12px !important;
-                color: $white !important;
+                padding-block: 12px;
+                color: $white ;
                 border: none;
                 border-radius: 0%;
                 padding-inline: 45px;
+                font-size: 14px;
                 @include sm{
                     padding-inline: 60px;
+                    font-size: 16px;
                 }
                 &.active{
-                    background-color: #1d202c !important;
-                    color: $theme2 !important;
-                    border-bottom: 3px solid $theme2;
-                    border-radius: 5px 5px 0  0;
+                    background-color: #1d202c;
+                    color: $theme2 ;
+                    border-bottom: 1px solid $theme2;
+                    border-radius: 0;
                 }
             }
         }
@@ -606,17 +631,23 @@ img {
                 }
                 & .leftside {
                     & .criptoname {
-                        font-size: 10px;
-                        color: $theme6 !important;
-                        font-weight: 500 !important;
+                        font-size: 12px;
+                        color: $theme6 ;
+                        font-weight: 500 ;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
                         @include lg{
-                            font-size: 12px;
+                            font-size: 16px;
                         }
                         @include xl{
                             font-size: 16px;
                         }
                         & img {
-                            width: 16px;
+                            width: 14px;
+                            @include lg{
+                                width: 16px;
+                            }
                         }
                     }
                     & .prich {
@@ -647,26 +678,28 @@ img {
                 }
                 &.miditems {
                     & .leftside {
+                        align-items: center;
                         border-right: 1px solid lighten($theme1, 20);
                     }
                 }
             }
             & .pnlDiv{
                 background-color: rgb(45 55 72);
-                padding: 13px 20px;
+                padding: 13px 1rem;
+                @include lg{
+                    padding: 13px 1.75rem;
+                }
                 & .pnltxt{
                     font-size: 13px;
-                    line-height: 100%;
                 }
                 & .mainCArd{
-                    padding-left: 10px;
                     @include sm{
-                        padding-left: 20px;
+                        padding-left: 10px;
                         border-left: 2px solid $theme6;
                     }
                     & .pnlimg{
-                        height: 13px;
-                        width: 13px;
+                        height: 18px;
+                        width: 18px;
                         display: flex;
                     }
                     & .txt{
@@ -684,61 +717,24 @@ img {
             & .walletTable{
                 margin-top: 20px;
                 background-color: $theme1;
-                & thead{
-                    background-color: #1d202c !important;
-                    border-color: $theme6 !important;
-                    & tr{
-                        color: $theme6;
-                        font-weight: normal !important;
-                        & th{
-                            font-size: 11px;
-                            @include sm{
-                                font-size: 14px;
-                            }
-                        }
-                    }
-                }
-                & tbody{
-                    & tr{
-                        color: $white;
-                        border-color: $theme6 !important;
-                    }
-                }
+                
                 & .mainCard{
                     padding: 40px 20px;
                     & .heading{
-                        font-size: 20px;
+                        font-size: 18px;
                         font-weight: 700;
                         padding: 20px 0 5px 0;
-                    }
-                    & .subHEad{
-                        font-size: 14px;
-                        font-weight: 500;
-                        color: $theme6;
-                    }
-                }
-                & .coinName{
-                    font-size: 13px;
-                    font-weight: 700;
-                    white-space: nowrap;
-                    @include sm{
-                        font-size: 15px;
-                    }
-                    & .bracket{
-                        font-size: 12px;
-                        @include sm{
-                            font-size: 10px;
+                        @include md{
+                            font-size: 20px;
                         }
                     }
-                }
-                & .coinImg{
-                    height: 24px;
-                    width: 24px;
-                    border-radius: 100%;
-                    overflow: hidden;
-                    @include sm{
-                        height: 30px;
-                        width: 30px;
+                    & .subHEad{
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: $theme6;
+                        @include md{
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -747,4 +743,72 @@ img {
 // wallet Section ends
 .suceesstxt{
     color: $theme3;
+}
+
+.table{
+    margin: 0px;
+    & tr {
+        & th, & td {
+            padding: 0.5rem 1rem;
+            white-space: nowrap;
+            font-size: 12px;
+            @include lg{
+                font-size: 14px;
+                padding: 0.7rem 1.5rem;
+            }
+        }
+    }
+    & thead{
+        background-color:  lighten($theme1, 10);
+        border-color: $theme6 ;
+        & tr{
+            color: $theme6;
+            font-weight: normal ;
+            & th{
+                color: $theme2;
+            }
+        }
+    }
+    & tbody{
+        & tr{
+            & td {
+                color: $white;
+            }
+            &:last-child{
+                & td{
+                    border: none;
+                }
+            }
+            
+            & .coinName{
+                font-size: 13px;
+                font-weight: 700;
+                white-space: nowrap;
+                @include lg{
+                    font-size: 15px;
+                }
+                & .bracket{
+                    font-size: 12px;
+                    @include lg{
+                        font-size: 10px;
+                    }
+                }
+            }
+            & .coinImg{
+                height: 24px;
+                width: 24px;
+                min-width: 24px;
+                border-radius: 100%;
+                overflow: hidden;
+                @include lg{
+                    min-width: 30px;
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+    &>:not(caption)>*>*{
+        border-color: lighten($theme1, 20);
+    }
 }
