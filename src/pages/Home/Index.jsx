@@ -8,7 +8,7 @@ import Addvideo from '../../component/Addvideo/Addvideo';
 import Lasttradegroup from '../../component/Lasttradegroup/Lasttradegroup';
 import Coinbysell from '../../component/Coinbysell/Coinbysell';
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <div className="container-fluid maindashboard overflow-hidden">

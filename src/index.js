@@ -14,12 +14,13 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Layout from './Layout/Layout'
 import Refer from './pages/Refer/Refer';
 import Wallet from './pages/Wallet/Wallet';
+import OrderList from './pages/OrderList/OrderList';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Home/>}/>
-      <Route path='/main' element={<Main/>}/>
+      <Route path='/orderlist' element={<OrderList/>}/>
       <Route path='/wallet' element={<Wallet/>}/>
       <Route path='/portfolio' element={<Portfolio/>}/>
       <Route path='/refer' element={<Refer/>}/>

@@ -220,20 +220,25 @@ img {
             padding: 0.5rem 0.75rem;
         }
         & .leftside {
+            align-items: center;
             & .criptoname {
-                font-size: 10px;
+                font-size: 12px;
+                color: darken($white, 10) ;
+                font-weight: 500 ;
                 display: flex;
                 align-items: center;
-                gap: 4px;
-                color: #a0aec0 !important;
+                gap: 8px;
                 @include lg{
-                    font-size: 12px;
+                    font-size: 16px;
                 }
                 @include xl{
-                    font-size: 14px;
+                    font-size: 16px;
                 }
                 & img {
-                    width: 16px;
+                    width: 14px;
+                    @include lg{
+                        width: 16px;
+                    }
                 }
             }
             & .prich {
@@ -268,7 +273,6 @@ img {
             }
         }
     }
-    
     & .portfoliotable{
         margin-top: 15px;
         & table{
@@ -295,17 +299,9 @@ img {
             width: 10px;
         }
         & .coinName{
-            font-size: 13px;
-            font-weight: 700;
             & .bracket{
                 font-size: 10px;
             }
-        }
-        & .coinImg{
-            height: 13px;
-            width: 13px;
-            border-radius: 100%;
-            overflow: hidden;
         }
     }
     & .portfolioResponsive{
@@ -361,21 +357,17 @@ img {
         height: 12px;
         width: 10px;
     }
-    & .coinName{
-        font-size: 13px;
-        font-weight: 700;
-        & .bracket{
-            font-size: 10px;
+    & .portfolioWallet {
+        &>div>div{
+            &:last-child{
+                & .carditem  {
+                    & .leftside  {
+                        border: none;
+                    }
+                }
+            }
         }
     }
-    & .coinImg{
-        height: 13px;
-        width: 13px;
-        border-radius: 100%;
-        overflow: hidden;
-    }
-
-
 }
 
 .referSection{
@@ -741,9 +733,7 @@ img {
         }
     }
 // wallet Section ends
-.suceesstxt{
-    color: $theme3;
-}
+
 
 .table{
     margin: 0px;
@@ -752,6 +742,7 @@ img {
             padding: 0.5rem 1rem;
             white-space: nowrap;
             font-size: 12px;
+            font-weight: 400;
             @include lg{
                 font-size: 14px;
                 padding: 0.7rem 1.5rem;
@@ -762,10 +753,10 @@ img {
         background-color:  lighten($theme1, 10);
         border-color: $theme6 ;
         & tr{
-            color: $theme6;
             font-weight: normal ;
             & th{
-                color: $theme2;
+                background-color: lighten($theme1, 5);
+                color: rgba($white, 0.8);
             }
         }
     }
@@ -809,6 +800,6 @@ img {
         }
     }
     &>:not(caption)>*>*{
-        border-color: lighten($theme1, 20);
+        border-color: lighten($theme1, 5);
     }
 }

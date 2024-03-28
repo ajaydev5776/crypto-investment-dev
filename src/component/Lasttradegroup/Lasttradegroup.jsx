@@ -5,8 +5,8 @@ import Lasttrade from '../Lasttrade/Lasttrade'
 const Lasttradegroup = () => {
   return (
     <>
-    <div className="lasttrade bg-theme1 h-100">
-        <div className="fw-medium fs-14 text-white text-opacity-75 p-2 border-bottom-light">Last Trades</div>
+    <div className="lasttrade h-100">
+        <div className="fw-medium fs-14 text-white text-opacity-75 p-2 border-bottom-light bg-theme1">Last Trades</div>
         <div className="responsive-table lasttradetable">
         <table className="table table-borderless align-middle">
             <thead>

@@ -27,14 +27,14 @@ const Coinbysell = () => {
             </div>
         </div>
         <div className="col-12 h-100 flex-fill overflow-y-auto">
-            <div className="tab-content bg-theme1" id="pills-tabContent">
+            <div className="tab-content bg-theme1 pb-lg-0 pb-4" id="pills-tabContent">
             <div className="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home1-tab" tabIndex={0}>
                 <ul className="list-unstyled m-0 cryptoprichGroup border-bottom-light py-2 d-flex flex-column gap-1">
                 <Bysellprichcoin cryptoprich="₹43,47,878" cryptoamount="₹6,30,443.01" barvaluenow="100" barvaluemax="100" barwidth="100%" isHighlighted="false"/>
                 <Bysellprichcoin cryptoprich="₹42,47,878" cryptoamount="₹5,30,443.01" barvaluenow="90" barvaluemax="90" barwidth="90%" isHighlighted="false"/>
                 <Bysellprichcoin cryptoprich="₹41,47,878" cryptoamount="₹3,30,443.01" barvaluenow="80" barvaluemax="80" barwidth="80%" isHighlighted="false"/>
                 <Bysellprichcoin cryptoprich="₹38,47,878" cryptoamount="₹3,10,443.01" barvaluenow="70" barvaluemax="70" barwidth="70%" isHighlighted="false"/>
-                <Bysellprichcoin cryptoprich="35,47,878" cryptoamount="₹2,30,443.01" barvaluenow="60" barvaluemax="60" barwidth="60%" isHighlighted="false"/>
+                <Bysellprichcoin cryptoprich="35,47,878"  cryptoamount="₹2,30,443.01" barvaluenow="60" barvaluemax="60" barwidth="60%" isHighlighted="false"/>
                 <Bysellprichcoin cryptoprich="₹32,47,878" cryptoamount="₹2,20,443.01" barvaluenow="50" barvaluemax="50" barwidth="50%" isHighlighted="false"/>
                 <Bysellprichcoin cryptoprich="₹29,47,878" cryptoamount="₹2,10,443.01" barvaluenow="40" barvaluemax="40" barwidth="40%" isHighlighted="false"/>
                 <Bysellprichcoin cryptoprich="₹28,47,878" cryptoamount="₹2,10,443.01" barvaluenow="30" barvaluemax="30" barwidth="30%" isHighlighted="false"/>

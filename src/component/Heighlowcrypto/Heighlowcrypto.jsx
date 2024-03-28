@@ -5,8 +5,8 @@ const Heighlowcrypto = ({cryptolavelTime, cryptoamount}) => {
     <>
     <div className="carditem miditems">
         <div className="leftside d-flex flex-column gap-1">
-        <div className="criptoname text-white text-opacity-75">{cryptolavelTime}</div>
-        <div className="prich d-flex align-items-center gap-2">{cryptoamount} </div>
+          <div className="criptoname text-white text-opacity-75">{cryptolavelTime}</div>
+          <div className="prich d-flex align-items-center gap-2">{cryptoamount} </div>
         </div>
     </div>
     </>

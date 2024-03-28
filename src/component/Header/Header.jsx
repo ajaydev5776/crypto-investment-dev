@@ -55,15 +55,14 @@ const Header = () => {
                     </div>
                     <div className="offcanvas-body">
                         <ul className="navbar-nav gap-3 align-items-lg-center me-auto mb-3 mb-lg-0">
-                            <li className="nav-item"><NavLink to="" className="nav-link">Spot</NavLink></li>
+                            <li className="nav-item"><NavLink to="" className="nav-link">Plans</NavLink></li>
                             <li className="nav-item"><NavLink to="/portfolio" className="nav-link">Portfolio</NavLink></li>
-                            <li className="nav-item"><NavLink to="/order" className="nav-link">Orders</NavLink></li>
+                            <li className="nav-item"><NavLink to="/orderlist" className="nav-link">Orders</NavLink></li>
                             <li className="nav-item"><NavLink to="/wallet" className="nav-link">Wallet & Fees</NavLink></li>
                             <li className="nav-item"><NavLink to="#" className="nav-link deposit text-uppercase fw-medium disabled text-white d-inline-flex">Crypto Deposit</NavLink></li>
                         </ul>
                         <ul className="navbar-nav gap-3 align-items-lg-center">
                             <li className="nav-item"><NavLink to="/refer" className="nav-link">Refer & Earn</NavLink></li>
-                            {/* <li className="nav-item"><NavLink to="#" className="nav-link">Help Center</NavLink></li> */}
                             <li className="nav-item"><NavLink to="#" className="nav-link d-flex align-items-center gap-3">Help Center<span><img src={Contact} alt="contact" className="object-contain w-100" /></span></NavLink></li>
                             <li className="nav-item"><NavLink to="#" onClick={handleLoginModalOpen} className="text-uppercase fw-medium btn btn-theme2 themebtn text-white">Login / Sign up</NavLink></li>
                         </ul>

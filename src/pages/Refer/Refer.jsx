@@ -1,20 +1,20 @@
 import React from 'react'
 import Search from '../../component/Search/Search'
 
-function Refer() {
+const Refer = () => {
     const copyText = () => {
         const referLink = document.querySelector('.referLinktxt');
         if (referLink) {
-          const textToCopy = referLink.innerText;
-          navigator.clipboard.writeText(textToCopy)
-            .then(() => {
-              alert('Text copied successfully!');
-            })
-            .catch(err => {
-              console.error('Error copying text: ', err);
-            });
-        }
-      };
+            const textToCopy = referLink.innerText;
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                alert('Text copied successfully!');
+                })
+                .catch(err => {
+                console.error('Error copying text: ', err);
+                });
+            }
+        };
     
     return (
         <>
