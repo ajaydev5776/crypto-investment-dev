@@ -15,6 +15,7 @@ import Layout from './Layout/Layout'
 import Refer from './pages/Refer/Refer';
 import Wallet from './pages/Wallet/Wallet';
 import OrderList from './pages/OrderList/OrderList';
+import Plans from './pages/Plans/Plans';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path='/wallet' element={<Wallet/>}/>
       <Route path='/portfolio' element={<Portfolio/>}/>
       <Route path='/refer' element={<Refer/>}/>
+      <Route path='/plans' element={<Plans/>}/>
     </Route>
   )
 )

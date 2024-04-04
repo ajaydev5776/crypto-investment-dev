@@ -803,3 +803,172 @@ img {
         border-color: lighten($theme1, 5);
     }
 }
+
+
+// plans Section start
+
+.sectionHeading{
+    font-size: 55px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    padding-block: 20px;
+    font-family: Roboto;
+}
+
+.planSection {
+    // min-height: 100vh;
+    // background: url("../img/backgroundCards.jfif");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // color: white;
+    // font-family: Roboto;
+    font-size: 16px;
+}
+
+
+
+
+.main-card {
+    padding: 30px;
+    background: $black;
+    border: 2px solid lighten($black, 8);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    & .main-card_title {
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 20px;
+        padding: 4px 20px;
+        border-radius: 40px;
+        background: $theme1;
+        display: inline-block;
+        margin-left: auto;
+    }
+    &.active{
+        & .main-card_title{
+            background-color: $theme2;
+        }
+    }
+}
+
+
+.pricing {
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.saveamount {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.pricing .small {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.border-div {
+    margin-top: 70px;
+    border-top: 1px solid #ffffff43;
+    backdrop-filter: blur(10px);
+}
+
+.features {
+    margin: 40px 0;
+    list-style-position: inside;
+}
+
+.features li {
+    padding-bottom: 10px;
+}
+
+a.cta_btn {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    background: $theme1;
+    border-radius: 50px;
+    padding: 20px 0;
+    color: $white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: all .3s ease-in-out;
+}
+
+a.cta_btn:hover {
+    background: lighten($theme1, 5);
+}
+.active a.cta_btn{
+    background: $theme2;
+    transition: all .3s ease-in-out;
+}
+.active a.cta_btn:hover{
+    background: lighten($theme2, 5);
+}
+.active.main-card{
+    border: 1px solid $theme2;
+}
+.link {
+    position: fixed;
+    background-color: #D12322;
+    padding: 23px 40px;
+    right: -99px;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .1s ease-in-out;
+}
+
+.link i {
+    padding-left: 7px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    background-color: black;
+}
+@media only screen and (max-width: 1024px) {
+    
+}
+@media only screen and (max-width: 768px) {
+    .main-card{
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .planSection {
+        font-size: 14px;
+    }
+
+    .main-card {
+        padding: 20px;
+    }
+
+    .main-card_title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .pricing {
+        font-size: 52px;
+    }
+
+    .border-div {
+        margin-top: 50px;
+        border-top: 1px solid;
+        backdrop-filter: blur(10px);
+    }
+
+    a.cta_btn {
+        font-size: 11px;
+    }
+}
